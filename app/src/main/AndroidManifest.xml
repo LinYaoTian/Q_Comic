@@ -16,20 +16,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".mvp.view.activity.MainActivity">
+        <activity android:name=".mvp.view.activity.MainActivity"/>
+        <activity android:name=".mvp.view.activity.LaunchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".mvp.view.activity.LaunchActivity" />
         <activity android:name=".mvp.view.activity.BookBillActivity" />
         <activity android:name=".mvp.view.activity.SearchResultActivity" />
         <activity android:name=".mvp.view.activity.SearchActivity" />
         <activity android:name=".mvp.view.activity.BookDetailActivity" />
         <activity android:name=".mvp.view.activity.ComicActivity" />
-        <activity android:name=".mvp.view.activity.BookBillDetailActivity"></activity>
+        <activity android:name=".mvp.view.activity.BookBillDetailActivity"/>
     </application>
 
 </manifest>

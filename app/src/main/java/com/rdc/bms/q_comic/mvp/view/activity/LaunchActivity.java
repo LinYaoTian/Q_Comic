@@ -33,11 +33,12 @@ public class LaunchActivity extends BaseActivity {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(500);
+                    Thread.sleep(1500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }finally {
                     StartActUtil.toMainAct(LaunchActivity.this);
+                    finish();
                 }
             }
         }).start();
