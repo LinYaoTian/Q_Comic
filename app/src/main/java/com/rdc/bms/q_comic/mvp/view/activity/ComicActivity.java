@@ -385,7 +385,7 @@ public class ComicActivity extends BaseActivity<ComicPresenter> implements IComi
     @Override
     public void rvComicScrollTo(int index) {
         if (index > -1 && index < mPresenter.getComicList().size()){
-            mComicLayoutManager.scrollToPosition(index);
+            mComicLayoutManager.scrollToPositionWithOffset(index,0);
         }
     }
 

@@ -46,6 +46,12 @@ public class SearchHistoryCell extends BaseRvCell<SearchHistoryBean> {
                     mListener.onClick(v,position);
                 }
             });
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mListener.onClickItem(mData,position);
+                }
+            });
         }
     }
 }

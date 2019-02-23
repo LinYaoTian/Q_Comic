@@ -168,7 +168,7 @@ public class SearchActivity extends BaseActivity<SearchPresenter> implements ISe
     }
 
     @NonNull
-    private BaseRvCell createCell(SearchHistoryBean bean) {
+    private BaseRvCell createCell(final SearchHistoryBean bean) {
         BaseRvCell cell = new SearchHistoryCell(bean);
         cell.setListener(new OnClickViewRvListener() {
             @Override
@@ -182,7 +182,11 @@ public class SearchActivity extends BaseActivity<SearchPresenter> implements ISe
 
             @Override
             public <C> void onClickItem(C data, int position) {
-
+                StartActUtil.toSearchResultAct(
+                        SearchActivity.this,
+                        bean.getKey(),
+                        bean.getKey(),
+                        Constant.TYPE_SEARCH);
             }
         });
         return cell;
