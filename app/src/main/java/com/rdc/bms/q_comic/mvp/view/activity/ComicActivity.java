@@ -13,7 +13,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AccelerateInterpolator;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -229,18 +228,17 @@ public class ComicActivity extends BaseActivity<ComicPresenter> implements IComi
                             String.valueOf(curComic.getPage()),
                             String.valueOf(curChapter.getEndVal()));
                 }
-                int f = mComicLayoutManager.findFirstVisibleItemPosition();
-                int l = mComicLayoutManager.findLastVisibleItemPosition();
                 if (dy < -5){
                     //往上浏览，看前面的章节
                     mPanelManage.showTopAndBottom();
                 }else if (dy > 5){
                     mPanelManage.hideTopAndBottom();
-                    mPanelManage.setQualityLayoutVisiablity(false);
+                    mPanelManage.setQualityLayoutVisibility(false);
                 }
+                int f = mComicLayoutManager.findFirstVisibleItemPosition();
+                int l = mComicLayoutManager.findLastVisibleItemPosition();
                 if (f == RecyclerView.NO_POSITION
-                        ||(mFirstVisibleItemIndex ==f
-                        &&mLastVisibleItemIndex ==l))
+                        || (mFirstVisibleItemIndex == f && mLastVisibleItemIndex ==l))
                     return;
                 mFirstVisibleItemIndex = f;
                 mLastVisibleItemIndex = l;
@@ -298,14 +296,14 @@ public class ComicActivity extends BaseActivity<ComicPresenter> implements IComi
         mLlQuality.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mPanelManage.setQualityLayoutVisiablity(true);
+                mPanelManage.setQualityLayoutVisibility(true);
             }
         });
         mIvQualityHigh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mPresenter.setImageQuality(ComicPresenter.QUALITY_HIGH);
-                mPanelManage.setQualityLayoutVisiablity(false);
+                mPanelManage.setQualityLayoutVisibility(false);
                 mIvQualityBottom.setImageResource(R.drawable.ic_read_definition_high);
                 showToast("已切换到高清画质");
             }
@@ -314,7 +312,7 @@ public class ComicActivity extends BaseActivity<ComicPresenter> implements IComi
             @Override
             public void onClick(View v) {
                 mPresenter.setImageQuality(ComicPresenter.QUALITY_MIDDLE);
-                mPanelManage.setQualityLayoutVisiablity(false);
+                mPanelManage.setQualityLayoutVisibility(false);
                 mIvQualityBottom.setImageResource(R.drawable.ic_read_definition_middle);
                 showToast("已切换到标清画质");
             }
@@ -323,7 +321,7 @@ public class ComicActivity extends BaseActivity<ComicPresenter> implements IComi
             @Override
             public void onClick(View v) {
                 mPresenter.setImageQuality(ComicPresenter.QUALITY_LOW);
-                mPanelManage.setQualityLayoutVisiablity(false);
+                mPanelManage.setQualityLayoutVisibility(false);
                 mIvQualityBottom.setImageResource(R.drawable.ic_read_definition_low);
                 showToast("已切换到流畅画质");
             }
@@ -387,7 +385,7 @@ public class ComicActivity extends BaseActivity<ComicPresenter> implements IComi
     @Override
     public void rvComicScrollTo(int index) {
         if (index > -1 && index < mPresenter.getComicList().size()){
-            mComicLayoutManager.scrollToPositionWithOffset(index,0);
+            mComicLayoutManager.scrollToPositionWithOffset(index,1);
         }
     }
 
@@ -413,7 +411,7 @@ public class ComicActivity extends BaseActivity<ComicPresenter> implements IComi
     private void startLoading(){
         mLoadingAnimator = ObjectAnimator
                 .ofInt(mLeavesLoading,"progress",0,30)
-                .setDuration(2500);
+                .setDuration(1000);
         mLoadingAnimator.setInterpolator(new AccelerateDecelerateInterpolator());
         mLoadingAnimator.setAutoCancel(true);
         mLoadingAnimator.start();
@@ -429,7 +427,7 @@ public class ComicActivity extends BaseActivity<ComicPresenter> implements IComi
                 }
                 ObjectAnimator animator = ObjectAnimator
                         .ofInt(mLeavesLoading,"progress",100)
-                        .setDuration(1500);
+                        .setDuration(2000);
                 animator.setInterpolator(new AccelerateInterpolator());
                 animator.addListener(new Animator.AnimatorListener() {
                     @Override
@@ -514,7 +512,7 @@ public class ComicActivity extends BaseActivity<ComicPresenter> implements IComi
      * 管理TopLayout、BottomLayout、RightLayout、QualitySettingLayout的显示和隐藏
      */
     private class PanelManage {
-        private View mQualitySettingLayout;
+        private View mQualitySettingLayout;//画质设置栏
         private View mTopLayout;
         private View mBottomLayout;
         private View mRightLayout;
@@ -547,7 +545,7 @@ public class ComicActivity extends BaseActivity<ComicPresenter> implements IComi
 
         }
 
-        void setQualityLayoutVisiablity(boolean visible){
+        void setQualityLayoutVisibility(boolean visible){
             mQualitySettingLayout.setVisibility(visible?View.VISIBLE:View.GONE);
         }
 

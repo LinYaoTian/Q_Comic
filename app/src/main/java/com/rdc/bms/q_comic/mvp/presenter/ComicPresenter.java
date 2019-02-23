@@ -127,12 +127,13 @@ public class ComicPresenter extends BasePresenter<IComicContract.View>
         mRvComicFirstVisibleItemIndex = firstVisibleItemIndex;
         ComicBean pre_LastComic = mOldComicList.get(firstVisibleItemIndex);
         ComicBean next_FirstComic = mOldComicList.get(lastVisibleItemIndex);
-        //这里逻辑比较复杂，其中 else if 那里我还没搞懂，只是找到某种规律
 //        Log.d("ComicPresenter", "firstVisibleItemIndex="+firstVisibleItemIndex);
 //        Log.d("ComicPresenter", "dy="+dy+",preListSize!=0:"+(mPreChapterList.size() != 0)+
 //                ",pre_LastComic.isLastPage()="+pre_LastComic.isLastPage()+",flag="+pre_LastComic.getBookBeanId().equals(mPreChapterList.get(mPreChapterList.size()-1).getBookBeanId()));
-        if (dy < 0 && mPreChapterList.size() != 0 && pre_LastComic.isLastPage() &&
-                pre_LastComic.getComicId().equals(mPreChapterList.get(mPreChapterList.size()-1).getComicId())){
+        if (dy < 0  && mPreChapterList.size() != 0
+                && pre_LastComic.isLastPage()
+                && pre_LastComic.getComicId()
+                .equals(mPreChapterList.get(mPreChapterList.size()-1).getComicId())){
             ChapterBean preChapter = mChapterMap.get(pre_LastComic.getChapterId());
             mHandler.sendMessage(mHandler.obtainMessage(NEED_UPDATE,preChapter));
             return;
@@ -148,8 +149,9 @@ public class ComicPresenter extends BasePresenter<IComicContract.View>
             }
             return;
         }
-        if (dy > 0 && mNextChapterList.size()!= 0 && next_FirstComic.isFirstPage() &&
-                next_FirstComic.getComicId().equals(mNextChapterList.get(0).getComicId())){
+        if (dy > 0 && mNextChapterList.size()!= 0
+                && next_FirstComic.isFirstPage()
+                && next_FirstComic.getComicId().equals(mNextChapterList.get(0).getComicId())){
             ChapterBean nextChapter = mChapterMap.get(next_FirstComic.getChapterId());
             mHandler.sendMessage(mHandler.obtainMessage(NEED_UPDATE,nextChapter));
         }else if (dy > 0 && lastVisibleItemIndex == mOldComicList.size()-1){
