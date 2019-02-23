@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/colorRed</color>
+    <color name="colorPrimaryDark">@color/colorRed</color>
+    <color name="colorAccent">@color/colorRed</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorYellow">#f3bd7e</color>
+    <color name="colorRed">#F36653</color>
+    <color name="colorDarkGreen">#7BC730</color>
+    <color name="colorLightGreen">#00CEBB</color>
+    <color name="colorOrange">#FFA742 </color>
+    <color name="colorBlue">#5DBDFF</color>
+    <color name="colorPurple">#A1A8FF</color>
+    <color name="colorPink">#ff3399</color>
+    <color name="colorSky">#00bbff</color>
+    <color name="colorLightGrey">#979797</color>
+    <color name="colorGolden">#f6c90d</color>
+    <color name="colorCopper">#a7734b</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGrey">#787878</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="bg_TopLayout">#eeeeff</color>
+    <color name="bg_rank_1">#fc7365</color>
+    <color name="bg_rank_2">#ff9f71</color>
+    <color name="bg_rank_3">#ffc477</color>
+    <color name="bg_rank_outer">#f5f5f5</color>
+    <color name="black_transparent_55">#55000000</color>
+    <color name="black_transparent_150">#96000000</color>
+    <color name="red_transparent_199">#c7f36653</color>
+    <color name="black_transparent_199">#c7000000</color>
+    <color name="white_transparent">#d4ffffff</color>
+
+    <color name="bg_support_text_red">#FC6352</color>
+    <color name="bg_support_red">#FEE0DD</color>
+    <color name="bg_support_text_green">#0AE1B5</color>
+    <color name="bg_support_green">#CCF9F0</color>
+    <color name="bg_support_text_orange">#FF9116</color>
+    <color name="bg_support_orange">#FDF3D5</color>
+
+    </resources>

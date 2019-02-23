@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="5dp">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:id="@+id/fl_bg_cell_rank"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/bg_rank_1">
+    </FrameLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_image_cell_rank"
+        android:layout_width="100dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/fl_bg_cell_rank"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/iv_cover_cell_rank"
+            tools:src="@mipmap/ic_logo"
+            android:scaleType="centerCrop"/>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_name_cell_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_normal"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/cv_image_cell_rank"
+        app:layout_constraintTop_toTopOf="@id/fl_bg_cell_rank"
+        tools:text="斗破苍穹" />
+
+    <TextView
+        android:id="@+id/tv_rank_cell_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@id/fl_bg_cell_rank"
+        app:layout_constraintTop_toTopOf="@id/fl_bg_cell_rank"
+        tools:text="01" />
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/tfl_cell_rank"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_total_cell_rank"
+        app:layout_constraintEnd_toStartOf="@id/tv_rank_cell_rank"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/tv_name_cell_rank"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_cell_rank"
+        app:layout_constraintVertical_bias="0.0">
+
+    </com.zhy.view.flowlayout.TagFlowLayout>
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/iv_total_cell_rank"
+        app:layout_constraintStart_toStartOf="@id/tv_name_cell_rank"
+        app:layout_constraintBottom_toBottomOf="@id/cv_image_cell_rank"/>
+
+    <TextView
+        android:id="@+id/tv_total_cell_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toBottomOf="@id/iv_total_cell_rank"
+        app:layout_constraintStart_toEndOf="@id/iv_total_cell_rank"
+        app:layout_constraintTop_toTopOf="@id/iv_total_cell_rank"
+        tools:text="人气值" />
+
+</android.support.constraint.ConstraintLayout>

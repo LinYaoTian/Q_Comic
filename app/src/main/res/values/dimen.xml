@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_normal">15sp</dimen>
+    <dimen name="text_size_bigger">18sp</dimen>
+    <dimen name="text_size_title">22sp</dimen>
+    <dimen name="text_size_small">13sp</dimen>
+    <dimen name="text_size_smaller">11sp</dimen>
+
+    <dimen name="topLayoutHeight">75dp</dimen>
+
+</resources>

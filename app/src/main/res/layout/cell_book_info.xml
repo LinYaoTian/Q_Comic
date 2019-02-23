@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tv_tip_synopsis_cell_book_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_synopsis"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_synopsis_cell_book_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_tip_synopsis_cell_book_info"
+        app:layout_constraintTop_toBottomOf="@id/tv_tip_synopsis_cell_book_info" />
+
+    <TextView
+        android:id="@+id/tv_tip_author_info_tab_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/author_info"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/tv_synopsis_cell_book_info"
+        app:layout_constraintTop_toBottomOf="@id/tv_synopsis_cell_book_info" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_author_cover_cell_book_info"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/svg_red_like_pressed"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/tv_tip_author_info_tab_detail"
+        app:layout_constraintTop_toBottomOf="@id/tv_tip_author_info_tab_detail" />
+
+    <TextView
+        android:id="@+id/tv_author_name_cell_book_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/colorGrey"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintStart_toEndOf="@id/civ_author_cover_cell_book_info"
+        app:layout_constraintTop_toTopOf="@id/civ_author_cover_cell_book_info"
+        tools:text="原创佳品" />
+
+    <ImageView
+        android:id="@+id/iv_author_priority_cell_book_info"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/svg_author_dk"
+        app:layout_constraintBottom_toBottomOf="@id/tv_author_name_cell_book_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/tv_author_name_cell_book_info"
+        app:layout_constraintTop_toTopOf="@id/tv_author_name_cell_book_info" />
+
+    <TextView
+        android:id="@+id/tv_fans_num_cell_book_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/colorGrey"
+        android:textSize="@dimen/text_size_smaller"
+        app:layout_constraintBottom_toBottomOf="@id/civ_author_cover_cell_book_info"
+        app:layout_constraintStart_toEndOf="@id/civ_author_cover_cell_book_info"
+        app:layout_constraintTop_toBottomOf="@id/tv_author_name_cell_book_info"
+        tools:text="粉丝 4652 人" />
+
+    <TextView
+        android:id="@+id/tv_tip_notice_cell_book_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/author_notice"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/civ_author_cover_cell_book_info" />
+
+    <TextView
+        android:id="@+id/tv_notice_cell_book_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorGrey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_tip_notice_cell_book_info"
+        app:layout_constraintTop_toBottomOf="@id/tv_tip_notice_cell_book_info" />
+
+</android.support.constraint.ConstraintLayout>

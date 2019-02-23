@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_homepage"
+        android:icon="@drawable/selector_tab_home"
+        android:title="主页" />
+    <item android:id="@+id/menu_type"
+        android:icon="@drawable/selector_tab_kind"
+        android:title="分类" />
+    <item android:id="@+id/menu_bookshelf"
+        android:icon="@drawable/selector_tab_bookshelf"
+        android:title="书架" />
+    <item android:id="@+id/menu_mine"
+        android:icon="@drawable/selector_tab_mine"
+        android:title="我的" />
+
+
+</menu>

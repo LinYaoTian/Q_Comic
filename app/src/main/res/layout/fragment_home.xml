@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:srlAccentColor="@color/colorRed"
+    android:id="@+id/refreshLayout_fragment_home"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/topLayoutHeight"
+            android:elevation="5dp"
+            android:id="@+id/cl_top_fragment_home"
+            android:background="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_bg_search_fragment_home"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="10dp"
+                android:padding="7dp"
+                android:src="@drawable/black_oval_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_search_fragment_home"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="13dp"
+                android:clickable="true"
+                android:src="@mipmap/svg_white_nav_bar_search"
+                app:layout_constraintBottom_toBottomOf="@id/iv_bg_search_fragment_home"
+                app:layout_constraintEnd_toEndOf="@id/iv_bg_search_fragment_home"
+                app:layout_constraintStart_toStartOf="@id/iv_bg_search_fragment_home"
+                app:layout_constraintTop_toTopOf="@id/iv_bg_search_fragment_home"
+                android:focusable="true" />
+
+            <ImageView
+                android:id="@+id/iv_bg_left_fragment_home"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:padding="7dp"
+                android:src="@drawable/black_oval_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_left_fragment_home"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="11dp"
+                android:src="@mipmap/pic_main_boy"
+                app:layout_constraintBottom_toBottomOf="@id/iv_bg_left_fragment_home"
+                app:layout_constraintEnd_toEndOf="@id/iv_bg_left_fragment_home"
+                app:layout_constraintStart_toStartOf="@id/iv_bg_left_fragment_home"
+                app:layout_constraintTop_toTopOf="@id/iv_bg_left_fragment_home" />
+
+            <TextView
+                android:id="@+id/tv_title_fragment_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:alpha="0"
+                android:text="@string/recommend"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/text_size_title"
+                app:layout_constraintBottom_toBottomOf="@id/iv_left_fragment_home"
+                app:layout_constraintEnd_toStartOf="@id/iv_search_fragment_home"
+                app:layout_constraintStart_toEndOf="@id/iv_left_fragment_home"
+                app:layout_constraintTop_toTopOf="@id/iv_left_fragment_home" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <com.rdc.bms.q_comic.widget.ListenOffsetYNestedScrollView
+            android:id="@+id/scrollView_fragment_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/ll_scroll_inner_fragment_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/banner_fragment_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:delay_time="3000"
+                    app:indicator_drawable_selected="@mipmap/point_0"
+                    app:indicator_drawable_unselected="@mipmap/point_1"
+                    app:indicator_height="8dp"
+                    app:indicator_width="8dp"
+                    app:title_height="30dp"
+                    app:title_textsize="@dimen/text_size_small">
+                </com.youth.banner.Banner>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"   android:id="@+id/ll_book_bill_fragment_home"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:background="?attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:src="@mipmap/icon_new"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/newest"
+                            android:textSize="@dimen/text_size_normal"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_rank_fragment_home"
+                        android:layout_width="0dp"
+                        android:paddingBottom="8dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:paddingTop="8dp"
+                        android:background="?attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:src="@mipmap/icon_ranking"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rank"
+                            android:textSize="@dimen/text_size_normal"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.rdc.bms.q_comic.widget.ListenOffsetYNestedScrollView>
+    </android.support.constraint.ConstraintLayout>
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

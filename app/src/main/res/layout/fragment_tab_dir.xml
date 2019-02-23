@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_tip_update_time_fragment_tab_dir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/last_update"
+        android:textColor="@color/colorGrey"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_update_time_fragment_tab_dir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintEnd_toStartOf="@id/ll_order_fragment_tab_dir"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/tv_tip_update_time_fragment_tab_dir"
+        app:layout_constraintTop_toTopOf="@id/tv_tip_update_time_fragment_tab_dir"
+        tools:text="3天前" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_order_fragment_tab_dir"
+        android:orientation="horizontal"
+        android:paddingEnd="10dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/tv_tip_update_time_fragment_tab_dir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_tip_update_time_fragment_tab_dir"
+        android:gravity="center"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/iv_order_fragment_tab_dir"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:clickable="true"
+            android:src="@drawable/svg_arrow_bottom"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/tv_order_fragment_tab_dir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="@string/des_order"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/colorGrey"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:descendantFocusability="blocksDescendants"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_tip_update_time_fragment_tab_dir">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_chapter_fragment_tab_dir"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

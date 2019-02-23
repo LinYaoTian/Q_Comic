@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="80dp"
+        android:id="@+id/cv_1"
+        android:layout_height="107dp"
+        android:layout_marginEnd="25dp"
+        android:elevation="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/cv_2"
+        app:layout_constraintEnd_toEndOf="@id/cv_2"
+        app:layout_constraintTop_toTopOf="@id/cv_2">
+
+        <ImageView
+            android:id="@+id/iv_cover_1_cell_book_bill"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorLightGrey"
+            android:scaleType="centerCrop"
+            />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="90dp"
+        android:layout_height="120dp"
+        android:elevation="15dp"
+        android:layout_marginEnd="25dp"
+        android:id="@+id/cv_2"
+        app:layout_constraintBottom_toBottomOf="@id/cv_3"
+        app:layout_constraintEnd_toEndOf="@id/cv_3"
+        app:layout_constraintTop_toTopOf="@id/cv_3">
+
+        <ImageView
+            android:id="@+id/iv_cover_2_cell_book_bill"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorRed"
+            android:scaleType="centerCrop"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/cv_3"
+        android:elevation="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_cover_3_cell_book_bill"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorDarkGreen"
+            android:scaleType="centerCrop"/>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_title_cell_book_bill"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_bigger"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/cv_3"
+        app:layout_constraintTop_toTopOf="@+id/cv_3"
+        tools:text="后宫那些事" />
+
+    <TextView
+        android:id="@+id/tv_num_cell_book_bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorLightGrey"
+        android:textSize="@dimen/text_size_small"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/tv_title_cell_book_bill"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_cell_book_bill"
+        tools:text="9本" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:id="@+id/tv_intro_cell_book_bill"
+        android:textColor="@color/colorLightGrey"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintBottom_toBottomOf="@id/cv_3"
+        app:layout_constraintEnd_toEndOf="@id/tv_title_cell_book_bill"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/cv_3"
+        tools:text="asdasd你好dasadasdsdasdasdasdasdasdasdasdasdasdasdaddasda" />
+
+    <include
+        android:id="@+id/layout_select_cell"
+        layout="@layout/layout_select"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

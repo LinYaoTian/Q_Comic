@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.view.activity.SearchActivity">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topLayoutHeight"
+        android:background="@color/colorWhite"
+        android:elevation="5dp">
+
+
+        <ImageView
+            android:id="@+id/iv_right_act_search"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="13dp"
+            android:src="@mipmap/svg_red_nav_bar_search"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_back_act_search"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="13dp"
+            android:src="@mipmap/svg_red_nav_bar_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/et_input_act_search"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:background="@drawable/bg_edittext_search"
+            android:hint="@string/tip_search"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:singleLine="true"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/text_size_normal"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back_act_search"
+            app:layout_constraintEnd_toStartOf="@id/iv_right_act_search"
+            app:layout_constraintStart_toEndOf="@id/iv_back_act_search"
+            app:layout_constraintTop_toTopOf="@id/iv_back_act_search" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <com.rdc.bms.q_comic.widget.ListenOffsetYNestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hot_search"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/colorBlack"
+                android:layout_margin="10dp"/>
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:id="@+id/tfl_hot_keys_act_search">
+            </com.zhy.view.flowlayout.TagFlowLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_history"
+                android:textSize="@dimen/text_size_normal"
+                android:textColor="@color/colorBlack"
+                android:layout_margin="10dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/rv_history_act_search">
+
+                </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </com.rdc.bms.q_comic.widget.ListenOffsetYNestedScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

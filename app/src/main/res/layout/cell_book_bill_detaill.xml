@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="5dp"
+    android:background="?attr/selectableItemBackground"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/cv_3"
+        android:elevation="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_cover_cell_book_bill_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorDarkGreen"
+            android:scaleType="centerCrop"/>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_title_cell_book_bill_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/cv_3"
+        app:layout_constraintTop_toTopOf="@+id/cv_3"
+        tools:text="后宫那些事" />
+
+    <TextView
+        android:id="@+id/tv_intro_cell_book_bill_detail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ellipsize="end"
+        android:textColor="@color/colorGrey"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toTopOf="@+id/tv_recent_chapter_cell_book_bill_detail"
+        app:layout_constraintEnd_toEndOf="@+id/tv_title_cell_book_bill_detail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/cv_3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_cell_book_bill_detail"
+        tools:text="asdasd你好dasadasdsdasdasdasdasdasdasdasdasdasdasdaddasda" />
+
+    <TextView
+        android:id="@+id/tv_recent_chapter_cell_book_bill_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/colorGrey"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toBottomOf="@+id/cv_3"
+        app:layout_constraintEnd_toEndOf="@+id/tv_title_cell_book_bill_detail"
+        app:layout_constraintStart_toStartOf="@+id/tv_title_cell_book_bill_detail"
+        tools:text="第4话" />
+
+    <!--<ImageView-->
+        <!--android:id="@+id/iv_like_cell_book_bill_detail"-->
+        <!--android:layout_width="45dp"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:layout_marginEnd="10dp"-->
+        <!--android:padding="7dp"-->
+        <!--android:src="@drawable/svg_red_like_normal"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="@id/cv_3" />-->
+
+
+</android.support.constraint.ConstraintLayout>

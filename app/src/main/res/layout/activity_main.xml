@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.view.activity.MainActivity">
+
+    <com.rdc.bms.q_comic.widget.NoScrollViewPager
+        android:id="@+id/vp_container_act_main"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toTopOf="@id/bnv_menus_act_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </com.rdc.bms.q_comic.widget.NoScrollViewPager>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bnv_menus_act_main"
+        android:layout_width="0dp"
+        android:background="@color/colorWhite"
+        android:layout_height="wrap_content"
+        app:menu="@menu/main_bottom_menus"
+        android:elevation="15dp"
+        app:itemTextColor="@color/color_state_menu_navi"
+        app:itemIconTint="@color/color_state_menu_navi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    </android.support.design.widget.BottomNavigationView>
+
+</android.support.constraint.ConstraintLayout>

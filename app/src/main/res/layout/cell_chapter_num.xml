@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@color/colorWhite"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_num_cell_chapter_num"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_margin="6.5dp"
+        android:background="@drawable/bg_btn_chapter"
+        android:gravity="center"
+        android:textColor="@color/colorGrey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="15话" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/iv_is_read_cell_chapter_num"
+        android:visibility="visible"
+        android:src="@drawable/icon_chapter_read"
+        app:layout_constraintEnd_toEndOf="@+id/tv_num_cell_chapter_num"
+        app:layout_constraintTop_toTopOf="@+id/tv_num_cell_chapter_num" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:padding="2dp"
+        android:id="@+id/iv_un_read_cell_chapter_num"
+        android:visibility="gone"
+        android:src="@drawable/svg_red_point"
+        app:layout_constraintEnd_toEndOf="@+id/tv_num_cell_chapter_num"
+        app:layout_constraintTop_toTopOf="@+id/tv_num_cell_chapter_num" />
+
+</android.support.constraint.ConstraintLayout>

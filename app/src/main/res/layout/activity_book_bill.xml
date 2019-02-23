@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mvp.view.activity.BookBillActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topLayoutHeight"
+        android:elevation="5dp"
+        android:background="@color/colorWhite">
+
+
+        <ImageView
+            android:id="@+id/iv_right_act_book_list"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="10dp"
+            android:padding="7dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_back_act_book_bill"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:padding="13dp"
+            android:clickable="true"
+            android:src="@mipmap/svg_red_nav_bar_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:focusable="true" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl_top_act_book_bill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_right_act_book_list"
+            app:layout_constraintStart_toEndOf="@id/iv_back_act_book_bill"
+            app:tabIndicatorColor="@color/colorRed"
+            app:tabMode="fixed"
+            app:tabTextAppearance="@style/TabLayoutStyle"
+            app:tabSelectedTextColor="@color/colorRed"
+            app:tabTextColor="@color/colorBlack">
+
+        </android.support.design.widget.TabLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/vp_container_act_book_bill"
+        android:overScrollMode="never">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

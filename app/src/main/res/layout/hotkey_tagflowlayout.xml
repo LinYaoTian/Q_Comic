@@ -1,0 +1,18 @@
+<TextView android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_tag"
+    android:background="@drawable/bg_hot_key_blue"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:layout_margin="5dp"
+    android:paddingEnd="9dp"
+    android:paddingStart="9dp"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp"
+    android:textSize="@dimen/text_size_small"
+    tools:text="基础知识"
+    android:textColor="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+</TextView>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="210dp"
+    android:layout_marginTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_red_book_layout_comic_list"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/svg_red_work"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title_layout_comic_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/related_recommend"
+        android:textColor="@color/colorLightGrey"
+        android:textSize="@dimen/text_size_normal"
+        app:layout_constraintBottom_toBottomOf="@id/iv_red_book_layout_comic_list"
+        app:layout_constraintStart_toEndOf="@id/iv_red_book_layout_comic_list"
+        app:layout_constraintTop_toTopOf="@id/iv_red_book_layout_comic_list" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_comic_layout_comic_list"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_red_book_layout_comic_list">
+
+    </android.support.v7.widget.RecyclerView>
+
+</android.support.constraint.ConstraintLayout>

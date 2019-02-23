@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.rdc.bms.q_comic">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".mvp.view.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".mvp.view.activity.LaunchActivity" />
+        <activity android:name=".mvp.view.activity.BookBillActivity" />
+        <activity android:name=".mvp.view.activity.SearchResultActivity" />
+        <activity android:name=".mvp.view.activity.SearchActivity" />
+        <activity android:name=".mvp.view.activity.BookDetailActivity" />
+        <activity android:name=".mvp.view.activity.ComicActivity" />
+        <activity android:name=".mvp.view.activity.BookBillDetailActivity"></activity>
+    </application>
+
+</manifest>

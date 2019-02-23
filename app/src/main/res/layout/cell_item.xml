@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:id="@+id/iv_icon_cell_item"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/svg_pic_list_fire" />
+
+    <TextView
+        android:id="@+id/tv_title_cell_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:singleLine="true"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_bigger"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_icon_cell_item"
+        app:layout_constraintStart_toEndOf="@id/iv_icon_cell_item"
+        app:layout_constraintTop_toTopOf="@id/iv_icon_cell_item"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="最近更新" />
+
+    <TextView
+        android:id="@+id/tv_intro_cell_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:singleLine="true"
+        android:textColor="@color/colorGrey"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title_cell_item"
+        app:layout_constraintEnd_toStartOf="@id/tv_more_cell_item"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toEndOf="@id/tv_title_cell_item"
+        app:layout_constraintTop_toTopOf="@id/tv_title_cell_item"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="独家精品私人定制" />
+
+    <TextView
+        android:id="@+id/tv_more_cell_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingStart="3dp"
+        android:paddingEnd="3dp"
+        android:background="@drawable/bg_oval_stroke"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="invisible"
+        android:text="@string/more"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toBottomOf="@id/iv_icon_cell_item"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_book_cell_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tv_more_cell_item"
+        app:layout_constraintStart_toStartOf="@id/iv_icon_cell_item"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon_cell_item" />
+
+
+
+</android.support.constraint.ConstraintLayout>

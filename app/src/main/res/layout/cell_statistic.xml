@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    tools:background="@drawable/bg_support_statistics_red">
+
+    <TextView
+        android:id="@+id/tv_name_cell_statistic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_value_cell_statistic"
+        app:layout_constraintEnd_toStartOf="@id/iv_icon_cell_statistic"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="推荐"
+        android:textSize="@dimen/text_size_small"
+        tools:textColor="@color/bg_support_text_red" />
+
+    <TextView
+        android:id="@+id/tv_value_cell_statistic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_small"
+        android:singleLine="true"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_icon_cell_statistic"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/tv_name_cell_statistic"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_cell_statistic"
+        tools:text="3699人"
+        tools:textColor="@color/bg_support_text_red" />
+
+    <ImageView
+        android:id="@+id/iv_icon_cell_statistic"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_ach_recommend" />
+
+
+</android.support.constraint.ConstraintLayout>

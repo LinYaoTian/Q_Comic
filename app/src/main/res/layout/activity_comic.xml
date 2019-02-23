@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.view.activity.ComicActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_container_act_comic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black_transparent_199"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tv_title_bottom_act_comic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:singleLine="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="@string/recommend" />
+
+        <TextView
+            android:id="@+id/tv_page_count_bottom_act_comic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minWidth="18dp"
+            android:singleLine="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_normal"
+            tools:text="99" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" / "
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/tv_page_total_bottom_act_comic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:minWidth="18dp"
+            android:singleLine="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_normal"
+            tools:text="99" />
+
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_top_layout_act_comic"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:background="@color/black_transparent_199"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back_act_comic"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="13dp"
+            android:src="@drawable/svg_white_nav_bar_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title_top_act_comic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_page_count_top_act_comic"
+            app:layout_constraintStart_toEndOf="@+id/iv_back_act_comic"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/recommend" />
+
+        <TextView
+            android:id="@+id/tv_split_act_comic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" / "
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_page_total_top_act_comic"
+            app:layout_constraintEnd_toStartOf="@+id/tv_page_total_top_act_comic"
+            app:layout_constraintTop_toTopOf="@+id/tv_page_total_top_act_comic" />
+
+        <TextView
+            android:id="@+id/tv_page_total_top_act_comic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:minWidth="18dp"
+            android:singleLine="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="99" />
+
+        <TextView
+            android:id="@+id/tv_page_count_top_act_comic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minWidth="18dp"
+            android:singleLine="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_split_act_comic"
+            app:layout_constraintEnd_toStartOf="@+id/tv_split_act_comic"
+            app:layout_constraintTop_toTopOf="@+id/tv_split_act_comic"
+            tools:text="99" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_layout_act_comic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black_transparent_199"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_container_act_comic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_setting_act_comic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="7dp"
+                android:src="@drawable/ic_read_set" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_auto_act_comic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="7dp"
+                android:src="@drawable/ic_read_start" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/auto"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_quality_act_comic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="45dp"
+                android:padding="7dp"
+                android:scaleType="centerInside"
+                android:id="@+id/iv_quality_bottom_act_comic"
+                android:src="@drawable/ic_read_definition_middle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quality"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_brightness_act_comic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="7dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_read_brightness_b" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/brightness"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_dir_act_comic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="7dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_read_catalog_ic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dir"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_right_layout_act_comic"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:background="@color/black_transparent_199"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_order_act_comic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/iv_order_act_comic"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="7dp"
+                android:src="@drawable/ic_read_catalog_order" />
+
+            <TextView
+                android:id="@+id/tv_order_act_comic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_normal" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_dir_act_comic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp"
+            android:id="@+id/ll_quality_setting_layout_act_comic"
+            app:layout_constraintBottom_toTopOf="@+id/ll_bottom_layout_act_comic"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/bg_black_transparent"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="45dp"
+                android:padding="7dp"
+                android:scaleType="centerInside"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="3dp"
+                android:paddingBottom="3dp"
+                android:id="@+id/iv_quality_low_ac_comic"
+                android:src="@drawable/ic_read_definition_low" />
+
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="45dp"
+                android:padding="7dp"
+                android:scaleType="centerInside"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="3dp"
+                android:paddingBottom="3dp"
+                android:id="@+id/iv_quality_middle_ac_comic"
+                android:src="@drawable/ic_read_definition_middle" />
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="45dp"
+                android:padding="7dp"
+                android:scaleType="centerInside"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="3dp"
+                android:paddingBottom="3dp"
+                android:id="@+id/iv_quality_high_ac_comic"
+                android:src="@drawable/ic_read_definition_high" />
+
+
+        </LinearLayout>
+
+    <include
+        layout="@layout/loading_layout"
+        android:id="@+id/loadingLayout_act_comic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </include>
+
+
+
+</android.support.constraint.ConstraintLayout>

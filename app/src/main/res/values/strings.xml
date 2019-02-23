@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Q_Comic</string>
+
+    <!--Launch-->
+    <string name="alter_tip">本程序仅供学习参考使用，严禁任何商业用途</string>
+    <string name="more">更多</string>
+    <string name="recommend">推荐</string>
+    <string name="newest">最新</string>
+    <string name="rank">排行</string>
+    <string name="hot">热门</string>
+    <string name="refresh">刷新</string>
+    <string name="tip_search">可按 漫画名 或 漫画家 搜索</string>
+    <string name="hot_search">热门搜索</string>
+    <string name="search_history">搜索历史</string>
+    <string name="offline_cache">离线缓存</string>
+    <string name="start_read">开始阅读</string>
+    <string name="last_update">最后更新：</string>
+    <string name="asc_order">升序</string>
+    <string name="last_page">上一页</string>
+    <string name="next_page">下一页</string>
+    <string name="related_recommend">相关推荐</string>
+    <string name="tip_synopsis">剧情简介</string>
+    <string name="author_info">作者信息</string>
+    <string name="author_notice">作者公告</string>
+    <string name="fan_influence">粉丝影响力</string>
+    <string name="des_order">降序</string>
+    <string name="setting">设置</string>
+    <string name="auto">自动</string>
+    <string name="quality">画质</string>
+    <string name="brightness">亮度</string>
+    <string name="dir">目录</string>
+    <string name="order">正序</string>
+    <string name="edit">编辑</string>
+    <string name="update">更新</string>
+    <string name="select_all">全选</string>
+    <string name="delete">删除</string>
+</resources>

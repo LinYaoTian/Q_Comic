@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scv_root_fragment_tab_support">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:focusable="false"
+            android:id="@+id/rv_statistics_fragment_tab_support">
+        </android.support.v7.widget.RecyclerView>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/tv_tip_fan_influence_cell_fan_top3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/fan_influence"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_rank2_cell_fan_top3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ll_rank1_cell_fan_top3"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ll_rank1_cell_fan_top3">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civ_cover_rank2_cell_fan_top3"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    tools:src="@drawable/ic_reader_error" />
+
+                <TextView
+                    android:id="@+id/tv_name_rank2_cell_fan_top3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size_small"
+                    tools:text="馒头414" />
+
+                <TextView
+                    android:id="@+id/tv_influence_rank2_cell_fan_top3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="@dimen/text_size_small"
+                    tools:text="影响力132" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_rank1_cell_fan_top3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ll_rank3_cell_fan_top3"
+                app:layout_constraintStart_toEndOf="@id/ll_rank2_cell_fan_top3"
+                app:layout_constraintTop_toBottomOf="@id/tv_tip_fan_influence_cell_fan_top3"
+                app:layout_constraintVertical_bias="0.0">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civ_cover_rank1_cell_fan_top3"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    tools:src="@drawable/ic_reader_error" />
+
+                <TextView
+                    android:id="@+id/tv_name_rank1_cell_fan_top3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size_small"
+                    tools:text="馒头414" />
+
+                <TextView
+                    android:id="@+id/tv_influence_rank1_cell_fan_top3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="@dimen/text_size_small"
+                    tools:text="影响力132" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_rank3_cell_fan_top3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ll_rank1_cell_fan_top3"
+                app:layout_constraintTop_toTopOf="@id/ll_rank1_cell_fan_top3">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civ_cover_rank3_cell_fan_top3"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    tools:src="@drawable/ic_reader_error" />
+
+                <TextView
+                    android:id="@+id/tv_name_rank3_cell_fan_top3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size_small"
+                    tools:text="馒头414" />
+
+                <TextView
+                    android:id="@+id/tv_influence_rank3_cell_fan_top3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="@dimen/text_size_small"
+                    tools:text="影响力132" />
+            </LinearLayout>
+
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:id="@+id/rv_fans_fragment_tab_support">
+        </android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>
