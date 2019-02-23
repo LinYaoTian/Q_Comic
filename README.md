@@ -1,5 +1,5 @@
 # Q_Comic
-仿知音漫客APP
+仿知音漫客APP,目前已经完成了基本浏览、搜索、收藏等基本功能。
 # 界面
 ![](https://upload-images.jianshu.io/upload_images/5643593-a620c6dbd0d17e19.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![](https://upload-images.jianshu.io/upload_images/5643593-ee22c0ae87bb2cb8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
