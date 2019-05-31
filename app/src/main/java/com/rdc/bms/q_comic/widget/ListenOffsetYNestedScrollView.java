@@ -1,6 +1,7 @@
 package com.rdc.bms.q_comic.widget;
 
 import android.content.Context;
+import android.support.v4.widget.NestedScrollView;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -12,7 +13,7 @@ import com.rdc.bms.q_comic.listener.OnScrollYChangeForAlphaListener;
  * 可以监听滑动距离并且可以嵌套水平RecyclerView的ScrollView
  * 这里使用外部拦截法解决冲突
  */
-public class ListenOffsetYNestedScrollView extends ScrollView {
+public class ListenOffsetYNestedScrollView extends NestedScrollView {
 
     private String TAG ="ListenOffsetYNestedScrollView";
 
@@ -38,10 +39,6 @@ public class ListenOffsetYNestedScrollView extends ScrollView {
 
     public ListenOffsetYNestedScrollView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-    }
-
-    public ListenOffsetYNestedScrollView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
     }
 
     public void setOnScrollYChangeForAlphaListener(OnScrollYChangeForAlphaListener listener){
@@ -92,34 +89,34 @@ public class ListenOffsetYNestedScrollView extends ScrollView {
         return super.dispatchTouchEvent(ev);
     }
 
-    @Override
-    public boolean onInterceptTouchEvent(MotionEvent ev) {
-        boolean intercepted = false;
-        int newX = (int) ev.getX();
-        int newY = (int) ev.getY();
-        switch (ev.getAction() & MotionEvent.ACTION_MASK){
-            case MotionEvent.ACTION_DOWN:
-                super.onInterceptTouchEvent(ev);
-                intercepted = false;
-                break;
-            case MotionEvent.ACTION_MOVE:
-                deltaY = Math.abs(newY-oldY);
-                deltaX = Math.abs(newX-oldX);
-                Log.d(TAG, "dispatchTouchEvent: "+ deltaY *1f/ deltaX);
-                if (deltaX > deltaY){
-                    //滑动的轨迹和水平方向切角小于45°则交给子View处理
-                    intercepted = false;
-                }else {
-                    intercepted = true;
-                }
-                break;
-            case MotionEvent.ACTION_UP:
-                intercepted = false;
-                break;
-        }
-        oldX = newX;
-        oldY = newY;
-        return intercepted;
-    }
+//    @Override
+//    public boolean onInterceptTouchEvent(MotionEvent ev) {
+//        boolean intercepted = false;
+//        int newX = (int) ev.getX();
+//        int newY = (int) ev.getY();
+//        switch (ev.getAction() & MotionEvent.ACTION_MASK){
+//            case MotionEvent.ACTION_DOWN:
+//                super.onInterceptTouchEvent(ev);
+//                intercepted = false;
+//                break;
+//            case MotionEvent.ACTION_MOVE:
+//                deltaY = Math.abs(newY-oldY);
+//                deltaX = Math.abs(newX-oldX);
+//                Log.d(TAG, "dispatchTouchEvent: "+ deltaY *1f/ deltaX);
+//                if (deltaX > deltaY){
+//                    //滑动的轨迹和水平方向切角小于45°则交给子View处理
+//                    intercepted = false;
+//                }else {
+//                    intercepted = true;
+//                }
+//                break;
+//            case MotionEvent.ACTION_UP:
+//                intercepted = false;
+//                break;
+//        }
+//        oldX = newX;
+//        oldY = newY;
+//        return intercepted;
+//    }
 
 }

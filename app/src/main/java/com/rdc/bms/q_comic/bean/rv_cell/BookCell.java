@@ -59,7 +59,12 @@ public class BookCell extends BaseRvCell<BookBean> {
 
         tvName.setText(mData.getName());
         tvScore.setText(mData.getScore());
-        tvRecentWords.setText(mData.getRecentChapter());
+        int index = mData.getRecentChapter().indexOf("话");
+        String chapter = "";
+        if (index != -1){
+            chapter = mData.getRecentChapter().substring(0,index+1);
+        }
+        tvRecentWords.setText(chapter);
         tvSummary.setText(mData.getSummary());
         Glide.with(holder.getContext()).load(mData.getCoverUrl()).into(ivCover);
 
